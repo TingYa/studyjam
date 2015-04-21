@@ -1,210 +1,208 @@
-ï»¿1
+1
 00:00:00,150 --> 00:00:02,170
-è¿™èŠ‚è¯¾çš„å¼€å§‹ï¼Œæˆ‘ä»¬ä¼šåœ¨forecastfragment.javaæ–‡ä»¶ä¸­
+×÷ÎªÕâ½Ú¿ÎµÄ¿ªÊ¼£¬ÎÒÃÇ»áÔÚforecastfragment.javaÎÄ¼şÖĞ
 We'll start by adding our call back functions
 
 2
 00:00:02,170 --> 00:00:05,040
-æ·»åŠ å›è°ƒå‡½æ•°
+Ìí¼Ó»Øµ÷º¯Êı£¬ÏÖÔÚ¶ÔÓÚloaderÀ´Ëµ£¬
 to our forecast fragment. Now know we have two
 
 3
 00:00:05,040 --> 00:00:07,230
-æˆ‘ä»¬æœ‰ä¸¤ä¸ªä¸åŒçš„loaderCallBackså›è°ƒå‡½æ•°é€‰é¡¹ï¼Œæˆ‘ä»¬è¦
+ÎÒÃÇÓĞÁ½¸ö²»Í¬µÄ»Øµ÷º¯ÊıÑ¡Ïî£¬ÎÒÃÇÒª
 different options here for loader call backs. We want to
 
 4
 00:00:07,230 --> 00:00:11,260
-ç¡®ä¿é€‰ä¸­çš„æ˜¯ "android.support.v4" åŒ…é‡Œçš„è¿™ä¸ªå›è°ƒå‡½æ•°
+È·±£Ñ¡ÖĞµÄÊÇ "android.support.v4" Õâ¸ö»Øµ÷º¯Êı
 make sure that we're choosing the android.support.v4 callback so
 
 5
 00:00:11,260 --> 00:00:13,780
-è¿™æ ·æˆ‘ä»¬å°±èƒ½ä½¿å¾—åº”ç”¨åœ¨ Gingerbreadï¼ˆ2.3ç‰ˆæœ¬ï¼‰ ç³»ç»Ÿä¸Šå…¼å®¹ã€‚è¿™æ˜¯ä¸€ä¸ªæ³›å‹ç±»
+ÕâÑùÎÒÃÇ¾ÍÄÜÊ¹µÃÓ¦ÓÃÔÚ Gingerbread ÏµÍ³ÉÏ¼æÈİ£¬ÕâÊÇÒ»¸ögeneric type
 we're compatible with Gingerbread. These take a generic
 
 6
 00:00:13,780 --> 00:00:17,402
-æˆ‘ä»¬å°†ä¼šä½¿ç”¨ cursorï¼Œæ˜¯çš„ï¼Œ
+ÎÒÃÇ½«»áÊ¹ÓÃ cursor£¬¶ÔµÄ
 type. We're going to want to use cursor. And yes that
 
 7
 00:00:17,402 --> 00:00:22,370
-å°±æ˜¯ Android.database.cursorï¼Œç°åœ¨è®©æˆ‘ä»¬å‘ä¸‹ç¿»åˆ°
+¾ÍÊÇ Android.database.cursor£¬ÏÖÔÚÈÃÎÒÃÇÏòÏÂ·­µ½
 is Andriod.database.cursor. Now, let's move down to where we
 
 8
 00:00:22,370 --> 00:00:25,380
-æˆ‘ä»¬è¦æ’å…¥ä»£ç çš„åœ°æ–¹ï¼Œå°±åœ¨æœ€ä¸‹é¢è¿™é‡Œ
+ÎÒÃÇÒª²åÈë´úÂëµÄµØ·½£¬¾ÍÔÚµ×²¿ÕâÀï
 want to actually insert this code. Here at the bottom
 
 9
 00:00:25,380 --> 00:00:28,390
-å½“ç„¶ï¼Œå®é™…ä¸Šå¯ä»¥ç”¨â€œCtrl+Iâ€å¿«æ·é”®æ¥æ’å…¥ä»£ç 
+µ±È»£¬Êµ¼ÊÉÏ¿ÉÒÔÓÃ¡°Ctrl+I¡±¿ì½İ¼ü µ÷³ö²åÈë´úÂë
 and, of course, we use control I to actually insert.
 
 10
 00:00:28,390 --> 00:00:32,250
-æˆ‘ä»¬çš„CursoråŠ è½½å™¨æ¨¡å¼è¢«å®Œç¾åœ°æ’å…¥åœ¨äº†è¿™é‡Œ
+ÎÒÃÇ°Ñ´ø²ÎÊıcursorµÄloader patternĞ´µÄºÜÆ¯ÁÁ
 And there we have it beautifully, our loader pattern with cursor.
 
 11
 00:00:32,250 --> 00:00:35,256
-ç°åœ¨æˆ‘ä»¬æ¥åšä¸€äº›å¯¹æˆ‘ä»¬æœ‰ç”¨çš„å·¥ä½œã€‚é¦–å…ˆï¼Œ
+ÏÖÔÚÎÒÃÇÀ´×öÒ»Ğ©¶ÔÎÒÃÇÓĞÓÃµÄ¹¤×÷
 Now let's do some work that will help us out. First
 
 12
 00:00:35,256 --> 00:00:38,270
-æˆ‘ä»¬åœ¨è¿™ä¸ªForecastFragmentçš„æœ€ä¸Šé¢æ·»åŠ ä¸€ä¸ªè®°å½•åˆ—çš„æ•°ç»„
-we add an array of columns to the top of our forecast fragment.
+Ê×ÏÈ£¬ÎÒÃÇ¡¾ÎŞ·¨·­Òë¡¿
+we're [INAUDIBLE] of columns to the top of our forecast fragment.
 
 13
 00:00:38,270 --> 00:00:40,590
-è¿™äº›åˆ—æ˜¯ä¼šåœ¨æˆ‘ä»¬çš„æ•°æ®åº“æŸ¥è¯¢ä¸­æ‰€ä½¿ç”¨çš„
+ÕâĞ©ÊÇ»áÔÚÎÒÃÇµÄ²éÑ¯ÖĞËùÊ¹ÓÃµÄ
 These are the columns that are going to be used in our
 
 14
 00:00:40,590 --> 00:00:44,490
-æ³¨æ„ï¼Œå› ä¸ºWeatherEntry å’Œ LocationEntryéƒ½æœ‰_ID
+×¢Òâ£¬ÒòÎªweather entry ºÍ location entry¶¼ÓĞ_ID
 query. Note, that since both weather entry and location entry have
 
 15
 00:00:44,490 --> 00:00:47,720
-æ‰€ä»¥æˆ‘ä»¬å¿…é¡»å®Œæ•´åœ°æè¿°å“ªä¸€ä¸ªID
+ËùÒÔÎÒÃÇ±ØĞë³ä·ÖĞŞÊÎÄÄÒ»¸öID
 the underscore ID field, we must fully qualify, which ID we
 
 16
 00:00:47,720 --> 00:00:50,460
-æ‰æ˜¯æˆ‘ä»¬åœ¨æƒ³åœ¨æŸ¥è¯¢ç»“æœä¸­åˆ—å‡ºæ¥çš„
+²ÅÊÇÎÒÃÇÔÚÕâ¸ö²éÑ¯º¯ÊıÖĞËùĞèÒªµÄ
 want in our projection for this query to work. And in
 
 17
 00:00:50,460 --> 00:00:53,110
-äº‹å®ä¸Šï¼Œè¿™ä¸ªæŸ¥è¯¢æ–¹æ³•éœ€è¦ä¸€ä¸ªprojectionæ‰èƒ½ä½¿ç”¨
+ÊÂÊµÉÏ£¬Õâ¸ö²éÑ¯·½·¨ĞèÒªÒ»¸öprojection²ÅÄÜÊ¹ÓÃ
 fact, this query requires a projection to work at
 
 18
 00:00:53,110 --> 00:00:58,190
-å¦åˆ™çš„è¯å°±æ˜¯æ¨¡æ‹Ÿä¸¤å¯çš„ æ¥ä¸‹æ¥ï¼Œè¿™é‡Œæ˜¯ä¸€äº›å’Œ
-all, otherwise that's ambiguous. Next, here are indexes that
+ ½ÓÏÂÀ´£¬ÕâÀïÊÇÒ»Ğ©ºÍ
+all, otherwise [UNKNOWN] ambiguous. Next, here are indexes that
 
 19
 00:00:58,190 --> 00:01:00,710
-FORECAST_COLUMNSæ†ç»‘åœ¨ä¸€èµ·çš„æŒ‡æ•°ã€‚è¿™å°†ä¼šä½¿æˆ‘ä»¬åé¢çš„å·¥ä½œ
+forecast_columuÀ¦°óÔÚÒ»ÆğµÄindex¡£Õâ½«»áÊ¹ÎÒÃÇºóÃæµÄ¹¤×÷
 are tied to these columns. This'll make some of
 
 20
 00:01:00,710 --> 00:01:04,200
-å˜å¾—æ›´åŠ ç®€å•ã€‚æ³¨æ„ï¼Œçœ‹è¿™äº›ï¼Œå®é™…ä¸Šå®ƒä»¬å¿…é¡»æ˜¯ç›¸äº’å¯¹åº”çš„
+±äµÃ¸ü¼Ó¼òµ¥¡£×¢Òâ£¬¿´ÕâĞ©£¬Êµ¼ÊÉÏËüÃÇÊÇÏà»¥¶ÔÓ¦µÄ
 our work easier, later on. Note, that these actually must
 
 21
 00:01:04,200 --> 00:01:07,420
-æ¥ä¸‹æ¥æˆ‘ä»¬åˆ›å»ºä¸€äº› public çš„æŒ‡æ•° 
+½ÓÏÂÀ´ÎÒÃÇ´´½¨Ò»Ğ© public index 
 match. Then we create some public indexes to use,
 
 22
 00:01:07,420 --> 00:01:09,730
-ä¾›æˆ‘ä»¬åœ¨adapterä¸­ä½¿ç”¨ï¼Œè¿™ä¼šä½¿å¾—æˆ‘ä»¬åœ¨adapter
+¹©ÎÒÃÇÔÚadapterÖĞÊ¹ÓÃ£¬Õâ»áÊ¹µÃÎÒÃÇÔÚadapter
 in our adapter. This allows us to make our
 
 23
 00:01:09,730 --> 00:01:12,190
-ä¸­çš„ä»£ç ç®€æ´æœ‰æ•ˆã€‚ä½†æ˜¯è¿™æ„å‘³ç€
+ÖĞµÄ´úÂë¼ò½àÓĞĞ§¡£µ«ÊÇÕâÒâÎ¶×Å
 code tiny and efficient, in the adapter. But it
 
 24
 00:01:12,190 --> 00:01:15,950
-æˆ‘ä»¬å¿…é¡»ç»´æŒcolumn indexå’Œprojectionä¹‹é—´çš„å…³ç³»
+ÎÒÃÇ±ØĞëÎ¬³Öcolumn indexºÍprojectionÖ®¼äµÄ¹ØÏµ
 means, we must maintain the relationship between these column indexes.
 
 25
 00:01:15,950 --> 00:01:19,530
-æ¯ä¸€ä¸ªloaderéƒ½æœ‰ä¸€ä¸ªID
+Ã¿Ò»¸öloader¶¼ÓĞÒ»¸öID
 and the projection. Each loader has an ID. It
 
 26
 00:01:19,530 --> 00:01:21,750
-å®ƒå…è®¸åœ¨åŒä¸€æ—¶é—´ä¸€ä¸ªfargmentä¸­èƒ½æœ‰å¤šä¸ªæ´»è·ƒçš„loader
+ËüÔÊĞíÒ»¸öfargmentÖĞÄÜÓĞ¶à¸ö»îÔ¾µÄloader
 allows a fragment to have multiple loaders active at
 
 27
 00:01:21,750 --> 00:01:25,080
-æˆ‘ä»¬å°†æŠŠè¿™ä¸ªIDå’Œä¸€ä¸ªå˜é‡ä¸€èµ·æ”¾åœ¨è¿™ä¸ªç±»çš„æœ€ä¸Šé¢
-once. We're going to place this along with an instance
+once. We're [INAUDIBLE] place this along with an instance
 
 28
 00:01:25,080 --> 00:01:26,820
-è¿™ä¸ªå˜é‡ç”¨äºå‚¨å­˜æˆ‘ä»¬çš„ä½ç½®ä¿¡æ¯
 variable to save off our location here at the
 
 29
 00:01:26,820 --> 00:01:29,535
- æ¥ä¸‹æ¥æˆ‘ä»¬å°†é‡è½½
+ ½ÓÏÂÀ´ÎÒÃÇ½«ÖØÔØ
 top of our class. Next we're going to override
 
 30
 00:01:29,535 --> 00:01:33,310
-onActivityCreatedå‡½æ•°ã€‚Loaderåœ¨onActivityCreatedå‡½æ•°
+onActivityCreatedº¯Êı¡£LoaderÔÚonActivityCreatedº¯Êı
 onActivityCreated. Loaders are initialized
 
 31
 00:01:33,310 --> 00:01:34,980
-ä¸­åˆå§‹åŒ–ï¼Œå› ä¸ºloaderçš„ç”Ÿå‘½å‘¨æœŸæ˜¯
+ÖĞ³õÊ¼»¯£¬ÒòÎªloaderµÄÉúÃüÖÜÆÚÊÇ
 in onActivityCreated because their life
 
 32
 00:01:34,980 --> 00:01:37,800
-å’Œè¿™ä¸ªactivityç»‘å®šåˆ°ä¸€èµ·çš„ï¼Œè€Œä¸æ˜¯å’Œfragment
+ºÍÕâ¸öactivity°ó¶¨µ½Ò»ÆğµÄ£¬¶ø²»ÊÇºÍfragment
 cycle is actually bound to the activity. Not the
 
 33
 00:01:37,800 --> 00:01:42,350
-è¯·æ³¨æ„è¿™ä¸ªloader IDçš„ä½¿ç”¨ â€”â€” FORECAST_LOADER
+Çë×¢ÒâÕâ¸öloaderÊ¹ÓÃµÄID ¡ª¡ª FORECAST_LOADER
 fragment. Note the use of the loader ID. FORECAST_LOADER.
 
 34
 00:01:42,350 --> 00:01:45,420
-ç„¶åæˆ‘ä»¬å›åˆ°onCreateLoaderè¿™ä¸ªå‡½æ•°
+È»ºóÎÒÃÇ»Øµ½onCreateLoaderÕâ¸öº¯Êı
 Then we return to the onCreateLoader function.
 
 35
 00:01:45,420 --> 00:01:49,570
-æˆ‘ä»¬æ·»åŠ ä¸€ä¸ªæ–°çš„CursorLoaderï¼Œè¿™ä¸ªCursorLoaderæœ‰æˆ‘ä»¬çš„æŸ¥è¯¢æ–¹æ³•
+ÎÒÃÇÌí¼ÓÒ»¸öCursorLoader£¬Õâ¸öCursorLoaderÓĞÎÒÃÇµÄ²éÑ¯·½·¨
 We add a new CursorLoader. This CursorLoader has
 
 36
 00:01:49,570 --> 00:01:53,350
-åŒ…æ‹¬ start dateï¼Œcolumså’Œsort orderã€‚
+°üÀ¨ start date£¬columsºÍsort order¡£
 our query, including start date, columns, and sort
 
 37
 00:01:53,350 --> 00:01:56,420
-æˆ‘ä»¬çš„start dateå®é™…ä¸Šåœ¨æˆ‘ä»¬çš„URIä¸­
+ÎÒÃÇµÄstart dateÊµ¼ÊÉÏÔÚÎÒÃÇµÄURIÖĞ
 order. Our start date is actually in our
 
 38
 00:01:56,420 --> 00:02:01,490
-columnå°±æ˜¯æˆ‘ä»¬ä¹‹å‰å®šä¹‰çš„ï¼Œå¹¶ä¸”sort orderæ˜¯
+column¾ÍÊÇÎÒÃÇÖ®Ç°¶¨ÒåµÄ£¬²¢ÇÒsort orderÊÇ
 URI. Our columns are the ones we defined earlier, and our sort order is going
 
 39
 00:02:01,490 --> 00:02:05,250
-åŸºäºCOLUMN_DATETEXTå‡åºçš„
+»ùÓÚCOLUMN_DATETEXTÉıĞòµÄ
 to be based upon COLUMN_DATETEXT ascending. Let's do
 
 40
 00:02:05,250 --> 00:02:07,430
-è®©æˆ‘ä»¬åšä¸€éæœ€åçš„æ£€æŸ¥ï¼Œæˆ‘ä»¬è¦ç¡®ä¿æˆ‘ä»¬ä½¿ç”¨
+ÈÃÎÒÃÇ×öÒ»±é×îºóµÄ¼ì²é£¬ÎÒÃÇÒªÈ·±£ÎÒÃÇÊ¹ÓÃ
 one last check. We want to make sure we're
 
 41
 00:02:07,430 --> 00:02:09,150
-äº†è¿™äº›ç±»çš„æ”¯æŒåº“ç‰ˆæœ¬
+ÁËÕâĞ©ÀàµÄÖ§³Ö¿â°æ±¾
 using the support library version of all of
 
 42
 00:02:09,150 --> 00:02:13,240
-å¦åˆ™ï¼Œæˆ‘ä»¬æ— æ³•å…¼å®¹Android 2.3ç‰ˆæœ¬
+·ñÔò£¬ÎÒÃÇÎŞ·¨¼æÈİAndroid 2.3°æ±¾
 these classes, otherwise we won't get Android 2.3 compatibility.
 
