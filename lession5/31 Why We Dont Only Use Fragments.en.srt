@@ -1,9 +1,10 @@
 1
 00:00:00,330 --> 00:00:03,300
-æ€è€ƒä¸€ä¸‹è¿™ä¸ªæ–¹æ³•æ˜¯å¦‚ä½•å·¥ä½œçš„ï¼Œä½ ä¸æƒ³åœ¨ä½ çš„åº”ç”¨ä¸­åªåˆ›å»ºä¸€ä¸ª
+Ë¼¿¼Ò»ÏÂÕâ¸ö·½·¨¿ÉÄÜµÄ¹¤×÷·½Ê½£¬Äã²»ÏëÔÚÄãµÄÓ¦ÓÃÖĞÖ»´´½¨Ò»¸ö
 Think about how that might work. What are some of the reasons
 
 2
 00:00:03,300 --> 00:00:06,860
-activityçš„åŸå› æœ‰å“ªäº›å‘¢ï¼Ÿ
+activityµÄÔ­ÒòÓĞÄÄĞ©ÄØ£¿
 you may not want to create only a single activity within your application?
+
