@@ -1,90 +1,90 @@
 1
 00:00:00,180 --> 00:00:02,700
-ä½ æœ‰ä¸€ä¸ªçœ‹èµ·æ¥å¾ˆæ£’çš„æ§ä»¶
+ÄãÓĞÒ»¸ö¿´ÆğÀ´ºÜ°ôµÄ¿Ø¼ş
 So you've got a pretty sweet looking control, but what about
 
 2
 00:00:02,700 --> 00:00:07,160
-ä½†æ˜¯é‚£äº›çœ‹ä¸è§çš„ç”¨æˆ·å‘¢ï¼ŸAccessibilityï¼ˆå¯è®¿é—®æ€§ï¼‰å¯¹äºä»–ä»¬å¾ˆé‡è¦
+µ«ÊÇÄÇĞ©²»ÄÜ¿´µ½ÁÁµãµÄÓÃ»§ÄØ£¿AccessibilityÊÇ½¨Á¢Ò»¸öÓ¦ÓÃ£¬
 users who can't see the shiny hotness? Accessibility is a key consideration
 
 3
 00:00:07,160 --> 00:00:10,560
-åœ¨å¼€å‘App å°¤å…¶æ˜¯å½“ä½ åˆ›å»ºä¸€ä¸ªæ–°çš„Viewæ—¶éœ€è¦è€ƒè™‘è¿›å»
+ÓÈÆäÊÇµ±Äã´´½¨Ò»¸öĞÂµÄÊÓÍ¼Ê±ÖØµã¿¼ÂÇµÄÒòËØ
 when building apps and particularly when you're creating new views. You
 
 4
 00:00:10,560 --> 00:00:13,850
-ä½ å¯ä»¥æ·»åŠ ä¸€ä¸ª contentDescriptionï¼ˆå†…å®¹è¯´æ˜ï¼‰ å°±åƒä½ åœ¨
+Äã¿ÉÒÔ´ÓÌí¼ÓÒ»¸ö contentdescription ¿ªÊ¼£¬¾ÍÏñÄã½«»áÔÚ
 can start by adding a content description, as you would for every
 
 5
 00:00:13,850 --> 00:00:16,360
-layoutå¸ƒå±€æ–‡ä»¶ä¸­çš„å…¶ä»–è§†å›¾ä¸­åšçš„ä¸€æ · å»ç¡®ä¿å®ƒä»¬éƒ½æ˜¯å¯ä»¥è®¿é—®çš„
+layout²¼¾ÖÎÄ¼şÖĞµÄÆäËûÊÓÍ¼ÖĞ×öµÄÒ»Ñù£¬È¥È·±£ËüÃÇ¶¼ÊÇ¿ÉÒÔ·ÃÎÊµÄ
 other view in your layout, to ensure that they are all
 
 6
 00:00:16,360 --> 00:00:19,820
-ä½†å…¶ä»–çš„ï¼Œå°±åƒé£é€Ÿï¼Œé£å‘
+µ«ÆäËûµÄ£¬¾ÍÏñ·çËÙ£¬º½Ïò
 accessible. But what about views like our wind speed, and direction gauge,
 
 7
 00:00:19,820 --> 00:00:23,250
-è¿™äº›éé™æ€çš„å†…å®¹å‘¢ï¼Ÿè¦çŸ¥é“ä¸€ä¸ªé£é€Ÿè®¡
+»¹ÓĞÄÇĞ©²¢²»ÊÇÒ»³É²»±äµÄÄÚÈİÄØ£¿ÒªÖªµÀ
 where the content isn't static? Knowing you're looking at a wind
 
 8
 00:00:23,250 --> 00:00:25,630
-å´ä¸èƒ½æä¾›é£é€Ÿã€é£å‘
+Èç¹ûÄã²»ÖªµÀËüÏÔÊ¾µÄ·çËÙºÍ·½Ïò
 gauge isn't very useful if you don't know what the speed and
 
 9
 00:00:25,630 --> 00:00:28,640
-è¿™æ ·æ˜¯æ²¡ç”¨çš„ è¿™é‡Œæœ‰å‡ ç§é€‰æ‹©
+¶øÈ¥Ñ°ÕÒÒ»¸ö·çËÙ¼ÆÊÇÃ»ÓĞÓÃµÄ¡£ºÃ°É£¬ÕâÀïÓĞ¼¸¸öÑ¡Ïî
 direction it's displaying are. Well, there are couple
 
 10
 00:00:28,640 --> 00:00:32,020
-å¯¹äºä¸èƒ½æ§åˆ¶è‡ªå·±valueçš„Viewæ¥è¯´
+¶ÔÓÚ²¢²»¿ØÖÆ×Ô¼ºvalueµÄgeneric viewsÀ´Ëµ
 of options here. For generic views, which don't control
 
 11
 00:00:32,020 --> 00:00:34,890
-æœ€ç®€å•çš„æ–¹æ³•å°±æ˜¯åœ¨åº”ç”¨è¿è¡Œæ—¶
+×î¼òµ¥µÄ·½·¨¾ÍÊÇÔÚÓ¦ÓÃÔËĞĞÊ±
 their own values, this simplest alternative is to
 
 12
 00:00:34,890 --> 00:00:38,485
-è®¾ç½® contentDescription
+ÉèÖÃ contentdescription
 set the content description within your app at runtime.
 
 13
 00:00:38,485 --> 00:00:40,280
-è€Œå¦ä¸€ä¸ªå¯é çš„æ–¹æ³•æ˜¯ï¼Œæ¯å½“å¯è§†å†…å®¹è¢«ä¿®æ”¹çš„æ—¶å€™
+¶øÁíÒ»¸ö¿É¿¿µÄ·½·¨ÊÇ£¬Ã¿µ±¿ÉÊÓÄÚÈİ±»ĞŞ¸ÄµÄÊ±ºò
 An even more robust solution is to send
 
 14
 00:00:40,280 --> 00:00:43,480
-ä»ä½ çš„viewä¸­ä½¿ç”¨sendAccessibilityEventå‡½æ•°
+´ÓÄãµÄviewÖĞÊ¹ÓÃsendAccessibilityEventº¯Êı
 an accessibility event from within your view. Whenever the
 
 15
 00:00:43,480 --> 00:00:46,990
-å‘é€Accessibilityäº‹ä»¶ã€‚ç„¶åé‡è½½dispatchPopulateAccessibilityEvent å‡½æ•°
+·¢ËÍAccessibilityÊÂ¼ş¡£È»ºóÖØÔØdispatchPopulateAccessibilityEvent º¯Êı
 visual content has been modified. Then override the dispatch
 
 16
 00:00:46,990 --> 00:00:50,830
-å’Œå½“å‰æ§ä»¶çš„å¯è§†çš„å€¼
+ºÍµ±Ç°¿Ø¼şµÄ¿ÉÊÓµÄÖµ
 populate accessibility event, and then the current control's visual
 
 17
 00:00:50,830 --> 00:00:54,534
-æ·»åŠ å¤„ç†accessibilityçš„å‡½æ•°åˆ°ä½ çš„è§†å›¾ä¸­
+¼ÌĞø°É£¬Ìí¼Óaccessibility handlerµ½ÄãµÄÊÓÍ¼ÖĞ
 value, the accessibility event. Go ahead and add accessibility handlers
 
 18
 00:00:54,534 --> 00:00:56,730
-å½“ä½ å®Œæˆåç‚¹å‡»è¿™é‡Œ
+µ±ÄãÍê³Éºóµã»÷ÕâÀï
 to your view and then click here when you're done.
 
